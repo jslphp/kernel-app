@@ -1,0 +1,109 @@
+$formElementBorder: #444;
+$formElementBorderFocus: #888;
+
+form {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+label {
+    display: inline-block;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 5px;
+
+}
+
+.form-group {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+
+    > *:only-child {
+        margin-left: auto;
+    }
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="number"], 
+input[type="search"], 
+textarea, 
+select {
+    border-radius: 3px;
+    border: solid 1px $formElementBorder;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    font: inherit;
+    color: inherit;
+    width: 100%;
+    font-weight: 400;
+    outline: none;
+
+    &:focus {
+        box-shadow: 0 0 1px rgba(255, 255, 255, 0.85);
+        border-color: $formElementBorderFocus;
+    }
+
+    &.large {
+        font-size: 1.15em;
+        font-weight: 700;
+    }
+
+    &.small {
+        font-size: 0.9em;
+        font-weight: 400;
+        color: inherit;
+        opacity: 0.6;
+    }
+}
+
+textarea {
+    min-height: 300px;
+    height: 100%;
+    resize: none;
+
+    &.no-scroll-y {
+        overflow-y: hidden;
+    }
+}
+
+button {
+    background-color: $infoColor;
+    border-radius: 3px;
+    font: inherit;
+    color: rgba(255, 255, 255, .95);
+    padding: 8px 20px;
+    border: 0;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    > .icon {
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: -1px;
+    }
+
+    &.danger {
+        background-color: $errorColor;
+    }
+
+    &.cta {
+        background-color: $successColor;
+    }
+
+    &.clear {
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+}

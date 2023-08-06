@@ -1,0 +1,25 @@
+{
+    "name": "jsl/kernel-app",
+    "description": "Skeleton app for jsl/kernel",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Magnus Eriksson",
+            "email": "mange@reloop.se"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "kernel/boot.php"
+        ],
+        "psr-4": {
+            "App\\": "app/src/"
+        }
+    },
+    "require": {
+        "jsl/kernel": "^0.1.0",
+        "jsl/kernel-common": "^0.1.0"
+    }
+}
